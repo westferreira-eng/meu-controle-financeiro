@@ -218,133 +218,26 @@ body.dark .invest-bar-label{color:#c5cad5}
 .sidebar:not(:hover) .sidebar-account{align-items:center;}
 </style>
 
-<style id="finance-visual-clean">
-/* Compact, refined Receitas/Despesas */
-.finance-page .finance-cards{
-  display:grid!important;
-  grid-template-columns:minmax(0,420px)!important;
-  margin:0 0 18px!important;
+<style id="sidebar-and-content-final">
+@media(min-width:761px){
+  .sidebar{width:78px!important;transition:width .22s ease!important;overflow-x:hidden!important;}
+  .sidebar:hover{width:278px!important;}
+  .main{margin-left:78px!important;width:calc(100% - 78px)!important;max-width:none!important;min-width:0!important;transition:margin-left .22s ease,width .22s ease!important;}
+  .sidebar:hover + .main{margin-left:278px!important;width:calc(100% - 278px)!important;}
+  .content{max-width:none!important;width:100%!important;min-width:0!important;}
+  .nav{display:flex!important;flex-direction:column!important;gap:8px!important;width:100%!important;}
+  .nav-main,.nav-finance,.nav-analysis{margin-top:0!important;}
+  .sidebar:not(:hover) .nav{align-items:center!important;}
+  .sidebar:not(:hover) .nav button{width:64px!important;height:58px!important;margin:0 auto!important;padding:0!important;border-radius:18px!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+  .sidebar:not(:hover) .nav button .nav-icon{width:25px!important;height:25px!important;min-width:25px!important;}
+  .sidebar:not(:hover) .nav button .nav-icon svg{width:25px!important;height:25px!important;stroke-width:1.65!important;}
+  .sidebar:hover .nav button .nav-icon{width:24px!important;height:24px!important;min-width:24px!important;}
+  .sidebar:hover .nav button .nav-icon svg{width:24px!important;height:24px!important;stroke-width:1.75!important;}
 }
-.finance-page .finance-card{
-  min-height:112px!important;
-  padding:20px 24px!important;
-  border-radius:20px!important;
-  box-shadow:0 10px 24px rgba(31,42,61,.06)!important;
-}
-.finance-page .finance-card .finance-card-icon{
-  width:36px!important;height:36px!important;
-  border-radius:11px!important;
-  margin-bottom:11px!important;
-}
-.finance-page .finance-card .finance-card-icon svg{width:19px!important;height:19px!important}
-.finance-page .finance-card .eyebrow{font-size:10px!important;letter-spacing:1.25px!important}
-.finance-page .finance-card .big{font-size:25px!important;margin-top:6px!important}
-.finance-page .finance-card .sub{font-size:11px!important;margin-top:4px!important}
-
-.finance-page .finance-tools{
-  display:grid!important;
-  grid-template-columns:minmax(0,1fr) auto auto!important;
-  gap:9px!important;
-  margin-bottom:12px!important;
-}
-.finance-page .finance-search{
-  height:44px!important;
-  border-radius:14px!important;
-  padding:0 13px!important;
-  box-shadow:none!important;
-}
-.finance-page .finance-search .search{font-size:13px!important}
-.finance-page .finance-tools .select{
-  height:44px!important;border-radius:14px!important;font-size:13px!important;
-}
-.finance-page .finance-count{font-size:11px!important}
-
-.finance-page .finance-panel{
-  border-radius:18px!important;
-  box-shadow:0 6px 20px rgba(35,28,76,.035)!important;
-}
-.finance-page .finance-panel-head{padding:15px 18px 13px!important}
-.finance-page .finance-panel-head h3{font-size:15px!important}
-.finance-page .finance-panel-head .muted{font-size:11px!important}
-.finance-page .finance-panel-head .total{font-size:16px!important}
-.finance-page .finance-table th{padding:9px 12px!important;font-size:9px!important}
-.finance-page .finance-table td{padding:9px 12px!important}
-.finance-page .finance-icon{
-  width:30px!important;height:30px!important;border-radius:9px!important;
-}
-.finance-page .finance-icon svg{width:17px!important;height:17px!important}
-.finance-page .inline-text{font-size:13px!important}
-.finance-page .finance-date{font-size:12px!important}
-.finance-page .finance-value input{font-size:12px!important}
-.finance-page .finance-actions-cell .row-action{width:30px!important;height:30px!important}
-.finance-page .finance-empty{padding:48px 20px!important}
-.finance-page .finance-empty b{font-size:17px!important}
-.finance-page .year-close-note{font-size:11px!important;margin-top:8px!important}
-
-/* Sidebar collapsed: centered icons, stable width, no vertical drift */
-@media (min-width:901px){
-  .sidebar{flex:0 0 144px!important;width:144px!important;transition:flex-basis .22s ease,width .22s ease!important}
-  .sidebar:hover{flex-basis:278px!important;width:278px!important}
-  .sidebar:not(:hover) .brand-text,
-  .sidebar:not(:hover) .goal,
-  .sidebar:not(:hover) .nav-label,
-  .sidebar:not(:hover) .user-name,
-  .sidebar:not(:hover) .user-role,
-  .sidebar:not(:hover) .logout-text,
-  .sidebar:not(:hover) .year-close-text,
-  .sidebar:not(:hover) .year-close-help{display:none!important}
-
-  .sidebar:not(:hover) .brand{
-    justify-content:center!important;padding:0!important;
-  }
-  .sidebar:not(:hover) .brand-logo{margin:0 auto!important}
-  .sidebar:not(:hover) .sidebar-user{
-    justify-content:center!important;align-items:center!important;
-    flex-direction:column!important;gap:12px!important;
-  }
-  .sidebar:not(:hover) .user-avatar{margin:0 auto!important}
-  .sidebar:not(:hover) .sidebar-actions{
-    display:flex!important;flex-direction:column!important;
-    align-items:center!important;gap:8px!important;
-  }
-  .sidebar:not(:hover) .sidebar-actions button{
-    width:38px!important;height:38px!important;min-width:38px!important;
-    padding:0!important;margin:0!important;
-  }
-  .sidebar:not(:hover) .nav{
-    width:100%!important;display:flex!important;flex-direction:column!important;
-    align-items:center!important;gap:8px!important;
-  }
-  .sidebar:not(:hover) .nav-section{
-    width:100%!important;margin:0!important;padding:0!important;
-  }
-  .sidebar:not(:hover) .nav-item{
-    width:64px!important;height:58px!important;
-    padding:0!important;margin:0 auto!important;
-    display:flex!important;align-items:center!important;justify-content:center!important;
-    border-radius:18px!important;
-  }
-  .sidebar:not(:hover) .nav-item svg,
-  .sidebar:not(:hover) .nav-item i,
-  .sidebar:not(:hover) .nav-item .icon{
-    width:24px!important;height:24px!important;
-    margin:0!important;flex:none!important;
-  }
-  .sidebar:not(:hover) .year-close{
-    width:64px!important;height:48px!important;
-    padding:0!important;margin:0 auto!important;
-    display:flex!important;align-items:center!important;justify-content:center!important;
-  }
-}
-
-/* Main area must actually resize with sidebar, not sit underneath it. */
-@media (min-width:901px){
-  .app,.app-shell,.layout{display:flex!important;min-width:0!important}
-  .main,.content,.main-content{min-width:0!important;width:auto!important;flex:1 1 auto!important}
-}
-@media(max-width:900px){
-  .finance-page .finance-cards{grid-template-columns:1fr!important}
-  .finance-page .finance-tools{grid-template-columns:1fr!important}
+@media(max-width:1150px) and (min-width:761px){
+  .sidebar{width:74px!important}.sidebar:hover{width:250px!important}
+  .main{margin-left:74px!important;width:calc(100% - 74px)!important}
+  .sidebar:hover + .main{margin-left:250px!important;width:calc(100% - 250px)!important}
 }
 </style>
 </head>
@@ -352,7 +245,7 @@ body.dark .invest-bar-label{color:#c5cad5}
   <div class="goalrow"><span>◆ Meta de investimento</span><span id="goalPct">0,0%</span></div>
   <div class="goalbar"><i id="goalBar"></i></div>
   <small id="goalText">R$ 0,00 de R$ 1.000.000,00</small>
-</div><div class="sidebar-account"><div class="sidebar-user"><div class="avatar">W</div><div class="sidebar-user-copy"><b>Wesley</b><small>Membro</small></div></div><div class="sidebar-account-actions"><button class="iconbtn" id="themeBtn" title="Alternar modo claro/escuro" aria-label="Alternar modo claro/escuro">☾</button><button class="logout-btn" id="logoutBtn" title="Sair" aria-label="Sair">Sair</button></div></div><div class="nav nav-main"><button data-page="dashboard" class="active"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span class="nav-label">Dashboard</span></button></div><div class="nav nav-finance"><button data-page="receitas"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19 19 5"/><path d="M9 5h10v10"/></svg></span><span class="nav-label">Receitas</span></button><button data-page="despesas"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5 19 19"/><path d="M9 19H19V9"/></svg></span><span class="nav-label">Despesas</span></button><button data-page="investimentos"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17 9 12l4 3 7-8"/><path d="M15 7h5v5"/></svg></span><span class="nav-label">Investimentos</span></button></div><div class="nav nav-analysis"><button data-page="resumos"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><span class="nav-label">Resumos</span></button><button data-page="relatorios"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M12 19V5M19 19v-7"/></svg></span><span class="nav-label">Relatórios</span></button><button data-page="planejamento"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v3M20 12h-3"/></svg></span><span class="nav-label">Planejamento</span></button></div><div class="sidebar-footer"><button class="year-close" onclick="closeYear()">⟳ &nbsp; Encerrar ano</button><small>O resumo do ano encerrado fica preservado e um novo ano é criado com as linhas recorrentes zeradas.</small></div></aside><main class="main"><div class="mobile-nav"><select id="mobilePage" class="select" style="width:100%"><option value="dashboard">Dashboard</option><option value="receitas">Receitas</option><option value="despesas">Despesas</option><option value="investimentos">Investimentos</option><option value="resumos">Resumos</option><option value="relatorios">Relatórios</option><option value="planejamento">Planejamento</option></select></div><span id="pageTitle" class="sr-only">Dashboard</span><section class="content" id="content"><div class="panel" style="min-height:240px;display:grid;place-items:center;text-align:center"><div><div style="font-size:28px;margin-bottom:10px">💰</div><h2 style="margin:0 0 6px">Meu Controle Financeiro</h2><p class="muted" style="margin:0">Carregando seu controle financeiro…</p></div></div></section></main></div>
+</div><div class="sidebar-account"><div class="sidebar-user"><div class="avatar">W</div><div class="sidebar-user-copy"><b>Wesley</b><small>Membro</small></div></div><div class="sidebar-account-actions"><button class="iconbtn" id="themeBtn" title="Alternar modo claro/escuro" aria-label="Alternar modo claro/escuro">☾</button><button class="logout-btn" id="logoutBtn" title="Sair" aria-label="Sair">Sair</button></div></div><div class="nav nav-main"><button data-page="dashboard" class="active"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span class="nav-label">Dashboard</span></button></div><div class="nav nav-finance"><button data-page="receitas"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="15" height="13" rx="2"/><path d="M3 8h15M15.5 13.5h.01"/><circle cx="18" cy="17" r="4"/><path d="M18 15.5v3M16.8 16.4c.2-.5.6-.8 1.2-.8.7 0 1.2.3 1.2.8 0 .6-.5.8-1.2 1-.7.2-1.2.4-1.2.9s.5.8 1.2.8c.6 0 1-.3 1.2-.8"/></svg></span><span class="nav-label">Receitas</span></button><button data-page="despesas"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h2l1.7 10.2a2 2 0 0 0 2 1.8h7.4a2 2 0 0 0 1.9-1.5L21 8H7"/><circle cx="10" cy="20" r="1.2"/><circle cx="18" cy="20" r="1.2"/><path d="M9 11h9"/></svg></span><span class="nav-label">Despesas</span></button><button data-page="investimentos"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V6h16v12H4Z"/><path d="M7 14l3-3 3 2 4-5"/><path d="M16 8h3v3"/></svg></span><span class="nav-label">Investimentos</span></button></div><div class="nav nav-analysis"><button data-page="resumos"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h11l3 3v15H5V3Z"/><path d="M8 8h8M8 12h8M8 16h6"/></svg></span><span class="nav-label">Resumos</span></button><button data-page="relatorios"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V10M12 19V5M19 19v-8"/><path d="M3 19h18"/></svg></span><span class="nav-label">Relatórios</span></button><button data-page="planejamento"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M4 12h16"/><path d="M8 8h8"/></svg></span><span class="nav-label">Planejamento</span></button></div><div class="sidebar-footer"><button class="year-close" onclick="closeYear()">⟳ &nbsp; Encerrar ano</button><small>O resumo do ano encerrado fica preservado e um novo ano é criado com as linhas recorrentes zeradas.</small></div></aside><main class="main"><div class="mobile-nav"><select id="mobilePage" class="select" style="width:100%"><option value="dashboard">Dashboard</option><option value="receitas">Receitas</option><option value="despesas">Despesas</option><option value="investimentos">Investimentos</option><option value="resumos">Resumos</option><option value="relatorios">Relatórios</option><option value="planejamento">Planejamento</option></select></div><span id="pageTitle" class="sr-only">Dashboard</span><section class="content" id="content"><div class="panel" style="min-height:240px;display:grid;place-items:center;text-align:center"><div><div style="font-size:28px;margin-bottom:10px">💰</div><h2 style="margin:0 0 6px">Meu Controle Financeiro</h2><p class="muted" style="margin:0">Carregando seu controle financeiro…</p></div></div></section></main></div>
 <div class="auth-overlay" id="authOverlay"><div class="auth-box"><div style="font-size:34px;margin-bottom:10px">💰</div><h2>Meu Controle Financeiro</h2><p>Entre com seu e-mail e senha para carregar e salvar seus dados com segurança.</p><div class="field"><label>E-mail</label><input id="authEmail" type="email" autocomplete="email" placeholder="seu@email.com"></div><div class="field"><label>Senha</label><input id="authPassword" type="password" autocomplete="current-password" placeholder="Mínimo de 6 caracteres"></div><div class="auth-actions"><button class="btn primary" id="loginBtn">Entrar</button><button class="btn" id="signupBtn">Criar conta</button></div><div class="auth-msg" id="authMsg"></div></div></div>
 <div class="modal" id="modal"><div class="modalbox"><div class="modalhead"><h3 id="modalTitle">Novo lançamento</h3><button class="close" id="closeModal">×</button></div><div id="modalBody"></div><div class="modalfoot"><button class="btn" id="cancelModal">Cancelar</button><button class="btn primary" id="saveModal">Salvar</button></div></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
