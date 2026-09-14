@@ -237,6 +237,29 @@ body.dark .invest-bar-label{color:#c5cad5}
 .sidebar:not(:hover) .year-close{width:72px!important;height:56px!important;padding:0!important;margin:0 auto!important;display:flex!important;align-items:center!important;justify-content:center!important;}
 }
 </style>
+
+<style id="sidebar-layout-final">
+@media (min-width:761px){
+  .sidebar{width:150px !important;}
+  .sidebar:hover{width:278px !important;}
+  .main{margin-left:150px !important;transition:margin-left .22s ease;min-width:0;}
+  .sidebar:hover + .main{margin-left:278px !important;}
+  .main .content{max-width:none;width:100%;box-sizing:border-box;}
+}
+@media (min-width:761px) and (max-width:1150px){
+  .sidebar{width:150px !important;}
+  .sidebar:hover{width:250px !important;}
+  .main{margin-left:150px !important;}
+  .sidebar:hover + .main{margin-left:250px !important;}
+}
+/* Compact state: reserve the full sidebar width so the content never sits underneath it. */
+@media (min-width:761px){
+  .sidebar:not(:hover) .brand{width:100%;box-sizing:border-box;}
+  .sidebar:not(:hover) .sidebar-account{width:100%;box-sizing:border-box;}
+  .sidebar:not(:hover) .nav{width:100%;box-sizing:border-box;}
+  .sidebar:not(:hover) .nav button{width:72px !important;margin-left:auto !important;margin-right:auto !important;}
+}
+</style>
 </head>
 <body><div class="app"><aside class="sidebar"><div class="brand"><div class="brandmark" aria-label="Meu Controle Financeiro"><svg viewBox="0 0 48 48" role="img" aria-hidden="true"><defs><linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6d63f2"/><stop offset="1" stop-color="#3b82d0"/></linearGradient></defs><path d="M8 16.5A5.5 5.5 0 0 1 13.5 11h20A5.5 5.5 0 0 1 39 16.5v15A5.5 5.5 0 0 1 33.5 37h-20A5.5 5.5 0 0 1 8 31.5z" fill="url(#logoGrad)"/><path d="M8 18h31v5H8z" fill="#fff" opacity=".2"/><circle cx="32.5" cy="28" r="5.5" fill="#fff"/><path d="M30 28.1l1.7 1.7 3.4-3.8" fill="none" stroke="#3e72d4" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 29c2.2-3 4.5-3.2 6.7-1.2 2.1 1.8 3.5.9 5-1.2" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".9"/></svg><i></i></div><div><strong>Meu Controle</strong><small>FINANCEIRO</small></div></div><div class="goal">
   <div class="goalrow"><span>◆ Meta de investimento</span><span id="goalPct">0,0%</span></div>
