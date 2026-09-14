@@ -241,11 +241,22 @@ body.dark .invest-bar-label{color:#c5cad5}
 }
 </style>
 
-<style id="collapsed-menu-vertical-center">
+
+
+<style id="collapsed-menu-true-center">
 @media (min-width:761px){
-  .sidebar:not(:hover) .nav{
-    transform:translateY(-150px)!important;
+  .sidebar:not(:hover){
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
   }
+  .sidebar:not(:hover) .goal{display:none!important;}
+  .sidebar:not(:hover) .sidebar-account{flex:0 0 auto!important;}
+  .sidebar:not(:hover) .nav-main{margin-top:auto!important;}
+  .sidebar:not(:hover) .nav-finance,
+  .sidebar:not(:hover) .nav-analysis{margin-top:8px!important;}
+  .sidebar:not(:hover) .nav-analysis{margin-bottom:auto!important;}
+  .sidebar:not(:hover) .sidebar-footer{display:none!important;}
 }
 </style>
 </head>
