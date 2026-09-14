@@ -218,49 +218,133 @@ body.dark .invest-bar-label{color:#c5cad5}
 .sidebar:not(:hover) .sidebar-account{align-items:center;}
 </style>
 
-<style id="finance-reference-v2">
-.finance-page .compact-subhead{margin-bottom:24px;align-items:flex-start}
-.finance-page .compact-subhead h2{font-size:30px;letter-spacing:-1.2px}
-.finance-page .subhead-desc{font-size:14px;color:#9691a4;margin-top:6px}
-.finance-page .finance-actions{align-items:center}
-.finance-page .finance-cards{display:grid;grid-template-columns:minmax(320px,540px);margin:0 0 24px}
-.finance-page .finance-card{min-height:150px;border-radius:24px;padding:28px 32px;box-shadow:0 18px 38px rgba(31,42,61,.08)}
-.finance-page .finance-card .finance-card-icon{width:48px;height:48px;border-radius:14px;background:#fff2;display:grid;place-items:center;margin-bottom:18px}
-.finance-page .finance-card .finance-card-icon svg{width:25px;height:25px}
-.finance-page .finance-card .eyebrow{font-size:12px;letter-spacing:1.4px}
-.finance-page .finance-card .big{font-size:34px;margin-top:10px}
-.finance-page .finance-card .sub{font-size:12px;margin-top:8px}
-.finance-page .finance-tools{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:10px;align-items:center;margin-bottom:14px}
-.finance-page .finance-search{height:52px;border:1px solid #dfdce8;background:#fff;border-radius:17px;display:flex;align-items:center;padding:0 16px;box-shadow:0 6px 18px rgba(35,28,76,.035)}
-.finance-page .finance-search svg{width:21px;height:21px;color:#a7a2b4;flex:0 0 auto}
-.finance-page .finance-search .search{border:0!important;box-shadow:none!important;padding:0 0 0 12px!important;background:transparent!important;font-size:15px}
-.finance-page .finance-tools .select{height:52px;border-radius:17px;border-color:#dfdce8;padding:0 16px;background:#fff}
-.finance-page .finance-count{font-size:12px;color:#aaa5b4}
-.finance-page .finance-panel{border:1px solid #e7e4ed;border-radius:20px;box-shadow:0 8px 24px rgba(35,28,76,.045);background:#fff}
-.finance-page .finance-panel:before{display:none}
-.finance-page .finance-panel-head{padding:18px 22px 16px;border-bottom:1px solid #efedf4}
-.finance-page .finance-panel-head h3{font-size:16px}
-.finance-page .finance-panel-head .muted{font-size:12px}
-.finance-page .finance-panel-head .total{font-size:18px}
-.finance-page .finance-table th{background:#fbfaff;padding:11px 14px;font-size:10px;letter-spacing:.11em}
-.finance-page .finance-table td{padding:11px 14px;border-bottom:1px solid #f0eef4}
-.finance-page .finance-table tbody tr:hover{background:#fcfbff}
-.finance-page .finance-table .desc{gap:10px}
-.finance-page .finance-icon{width:34px;height:34px;border-radius:10px}
-.finance-page .finance-icon svg{width:19px;height:19px}
-.finance-page .inline-text{font-size:14px;font-weight:650}
-.finance-page .category-input{color:#726d7e;font-weight:600}
-.finance-page .finance-date{font-size:13px;color:#8d8899}
-.finance-page .finance-value .inline-money{gap:6px}
-.finance-page .finance-value input{font-size:13px;font-weight:750}
-.finance-page .finance-actions-cell .row-action{width:34px;height:34px;border-radius:50%;border:1px solid #ece8ef;background:#fff;color:#9a93a3}
-.finance-page .finance-empty{padding:70px 20px;font-size:14px}
-.finance-page .finance-empty b{font-size:20px;margin-bottom:7px}
-.finance-page .year-close-note{font-size:12px;color:#9791a2;margin-top:10px}
+<style id="finance-visual-clean">
+/* Compact, refined Receitas/Despesas */
+.finance-page .finance-cards{
+  display:grid!important;
+  grid-template-columns:minmax(0,420px)!important;
+  margin:0 0 18px!important;
+}
+.finance-page .finance-card{
+  min-height:112px!important;
+  padding:20px 24px!important;
+  border-radius:20px!important;
+  box-shadow:0 10px 24px rgba(31,42,61,.06)!important;
+}
+.finance-page .finance-card .finance-card-icon{
+  width:36px!important;height:36px!important;
+  border-radius:11px!important;
+  margin-bottom:11px!important;
+}
+.finance-page .finance-card .finance-card-icon svg{width:19px!important;height:19px!important}
+.finance-page .finance-card .eyebrow{font-size:10px!important;letter-spacing:1.25px!important}
+.finance-page .finance-card .big{font-size:25px!important;margin-top:6px!important}
+.finance-page .finance-card .sub{font-size:11px!important;margin-top:4px!important}
+
+.finance-page .finance-tools{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto auto!important;
+  gap:9px!important;
+  margin-bottom:12px!important;
+}
+.finance-page .finance-search{
+  height:44px!important;
+  border-radius:14px!important;
+  padding:0 13px!important;
+  box-shadow:none!important;
+}
+.finance-page .finance-search .search{font-size:13px!important}
+.finance-page .finance-tools .select{
+  height:44px!important;border-radius:14px!important;font-size:13px!important;
+}
+.finance-page .finance-count{font-size:11px!important}
+
+.finance-page .finance-panel{
+  border-radius:18px!important;
+  box-shadow:0 6px 20px rgba(35,28,76,.035)!important;
+}
+.finance-page .finance-panel-head{padding:15px 18px 13px!important}
+.finance-page .finance-panel-head h3{font-size:15px!important}
+.finance-page .finance-panel-head .muted{font-size:11px!important}
+.finance-page .finance-panel-head .total{font-size:16px!important}
+.finance-page .finance-table th{padding:9px 12px!important;font-size:9px!important}
+.finance-page .finance-table td{padding:9px 12px!important}
+.finance-page .finance-icon{
+  width:30px!important;height:30px!important;border-radius:9px!important;
+}
+.finance-page .finance-icon svg{width:17px!important;height:17px!important}
+.finance-page .inline-text{font-size:13px!important}
+.finance-page .finance-date{font-size:12px!important}
+.finance-page .finance-value input{font-size:12px!important}
+.finance-page .finance-actions-cell .row-action{width:30px!important;height:30px!important}
+.finance-page .finance-empty{padding:48px 20px!important}
+.finance-page .finance-empty b{font-size:17px!important}
+.finance-page .year-close-note{font-size:11px!important;margin-top:8px!important}
+
+/* Sidebar collapsed: centered icons, stable width, no vertical drift */
+@media (min-width:901px){
+  .sidebar{flex:0 0 144px!important;width:144px!important;transition:flex-basis .22s ease,width .22s ease!important}
+  .sidebar:hover{flex-basis:278px!important;width:278px!important}
+  .sidebar:not(:hover) .brand-text,
+  .sidebar:not(:hover) .goal,
+  .sidebar:not(:hover) .nav-label,
+  .sidebar:not(:hover) .user-name,
+  .sidebar:not(:hover) .user-role,
+  .sidebar:not(:hover) .logout-text,
+  .sidebar:not(:hover) .year-close-text,
+  .sidebar:not(:hover) .year-close-help{display:none!important}
+
+  .sidebar:not(:hover) .brand{
+    justify-content:center!important;padding:0!important;
+  }
+  .sidebar:not(:hover) .brand-logo{margin:0 auto!important}
+  .sidebar:not(:hover) .sidebar-user{
+    justify-content:center!important;align-items:center!important;
+    flex-direction:column!important;gap:12px!important;
+  }
+  .sidebar:not(:hover) .user-avatar{margin:0 auto!important}
+  .sidebar:not(:hover) .sidebar-actions{
+    display:flex!important;flex-direction:column!important;
+    align-items:center!important;gap:8px!important;
+  }
+  .sidebar:not(:hover) .sidebar-actions button{
+    width:38px!important;height:38px!important;min-width:38px!important;
+    padding:0!important;margin:0!important;
+  }
+  .sidebar:not(:hover) .nav{
+    width:100%!important;display:flex!important;flex-direction:column!important;
+    align-items:center!important;gap:8px!important;
+  }
+  .sidebar:not(:hover) .nav-section{
+    width:100%!important;margin:0!important;padding:0!important;
+  }
+  .sidebar:not(:hover) .nav-item{
+    width:64px!important;height:58px!important;
+    padding:0!important;margin:0 auto!important;
+    display:flex!important;align-items:center!important;justify-content:center!important;
+    border-radius:18px!important;
+  }
+  .sidebar:not(:hover) .nav-item svg,
+  .sidebar:not(:hover) .nav-item i,
+  .sidebar:not(:hover) .nav-item .icon{
+    width:24px!important;height:24px!important;
+    margin:0!important;flex:none!important;
+  }
+  .sidebar:not(:hover) .year-close{
+    width:64px!important;height:48px!important;
+    padding:0!important;margin:0 auto!important;
+    display:flex!important;align-items:center!important;justify-content:center!important;
+  }
+}
+
+/* Main area must actually resize with sidebar, not sit underneath it. */
+@media (min-width:901px){
+  .app,.app-shell,.layout{display:flex!important;min-width:0!important}
+  .main,.content,.main-content{min-width:0!important;width:auto!important;flex:1 1 auto!important}
+}
 @media(max-width:900px){
-  .finance-page .finance-cards{grid-template-columns:1fr}
-  .finance-page .finance-tools{grid-template-columns:1fr}
-  .finance-page .finance-count{display:none}
+  .finance-page .finance-cards{grid-template-columns:1fr!important}
+  .finance-page .finance-tools{grid-template-columns:1fr!important}
 }
 </style>
 </head>
@@ -312,11 +396,7 @@ function title(t){document.getElementById('pageTitle').textContent=t}
 function layoutHead(t,desc,actions=''){return `<div class="subhead compact-subhead"><div><h2>${t}</h2>${desc?`<p class="subhead-desc">${desc}</p>`:''}</div><div class="actions">${actions}</div></div>`}
 function dashboard(){title('Dashboard');let t=totals(),d=data(),i=month,exp=t.exp[i],inc=t.inc[i],bal=t.bal[i],yrExp=sum(t.exp),yrInc=sum(t.inc),yrBal=yrInc-yrExp;let recent=[3,4,5,6,7,8],scale=Math.max(...recent.flatMap(x=>[t.exp[x],t.inc[x]]),1);let top=validItems(d.expenses).map(x=>({name:x.name,v:sum(x.values)})).sort((a,b)=>b.v-a.v).slice(0,6),mx=Math.max(...top.map(x=>x.v),1);let resultRate=inc>0?bal/inc:(exp===0?1:0),spendControl=inc>0?Math.max(0,Math.min(1,1-exp/inc)):(exp===0?1:0),savingRate=inc>0?bal/inc:0,recentMonths=Math.max(0,i-2),recentIdx=[];for(let k=recentMonths;k<=i;k++)recentIdx.push(k);let consistency=recentIdx.length?recentIdx.filter(k=>t.bal[k]>=0).length/recentIdx.length:1;let score=Math.max(0,Math.min(100,Math.round((Math.max(0,Math.min(1,(resultRate+1)/2))*40)+(Math.max(0,Math.min(1,(spendControl+1)/2))*20)+(Math.max(0,Math.min(1,(savingRate+1)/2))*20)+(consistency*20))));return layoutHead('Dashboard','Visão consolidada das suas finanças pessoais',`<div class="monthnav"><button onclick="prevMonth()">‹</button><span>${MONTHS[i]} ${year}</span><button onclick="nextMonth()">›</button></div>`)+`<div class="cards compact-kpis"><div class="metric mgreen"><div class="ico">↗</div><div class="label">RECEITAS DO MÊS</div><div class="value">${money(inc)}</div><div class="foot">${yrInc?pct(inc/yrInc*100):'0%'} da receita anual</div></div><div class="metric mred"><div class="ico">▣</div><div class="label">DESPESAS DO MÊS</div><div class="value">${money(exp)}</div><div class="foot">${inc?pct(exp/inc*100):'0%'} da renda usada</div></div><div class="metric mpurple"><div class="ico">▰</div><div class="label">SALDO DO MÊS</div><div class="value">${money(bal)}</div><div class="foot">${inc?pct(bal/inc*100):'0%'} economizado</div></div><div class="metric morange"><div class="ico">Σ</div><div class="label">SALDO DO ANO</div><div class="value">${money(yrBal)}</div><div class="foot">${yrInc?pct(yrBal/yrInc*100):'0%'} do total recebido</div></div></div><div class="grid2"><div class="panel"><div class="panelhead"><h3>Evolução — Últimos 6 Meses</h3><span class="muted">${year}</span></div><div class="chart">${recent.map(x=>`<div class="barcol"><div class="bars"><div class="bar inc" style="height:${Math.max(2,t.inc[x]/scale*100)}%" title="${money(t.inc[x])}"></div><div class="bar exp" style="height:${Math.max(2,t.exp[x]/scale*100)}%" title="${money(t.exp[x])}"></div></div><div class="month">${MONTHS[x].slice(0,3)}</div></div>`).join('')}</div><div class="legend"><span><i class="dot g"></i>Receitas</span><span><i class="dot r"></i>Despesas</span></div></div><div class="panel"><div class="panelhead"><h3>Score Financeiro · mês</h3><span class="badge">de 100</span></div><div class="score"><div class="ring" style="background:conic-gradient(#f2a00e 0 ${score}%,#eeeef5 ${score}% 100%)"><div class="scoretext"><b>${score}</b><span>DE 100</span><small>${score>=80?'Excelente saúde financeira':score>=65?'Boa saúde financeira':score>=50?'Saúde financeira moderada':'Saldo negativo no mês'}</small></div></div></div></div></div>`}
 function financeCategory(kind,name){let n=String(name||'').toLowerCase();if(kind==='income'){if(n.includes('salár')||n.includes('salario'))return'Salário';if(n.includes('aluguel'))return'Aluguel';if(n.includes('canal'))return'Canal Rural';if(n.includes('usina'))return'Usina';return'Receitas'}if(n.includes('aluguel'))return'Moradia';if(n.includes('condom'))return'Moradia';if(n.includes('energia')||n.includes('internet')||n.includes('celular'))return'Contas';if(n.includes('escola')||n.includes('educ'))return'Educação';if(n.includes('cartão')||n.includes('cartao'))return'Cartões';if(n.includes('seguro'))return'Seguros';if(n.includes('iptu'))return'Impostos';if(n.includes('mei'))return'Impostos';if(n.includes('hotel')||n.includes('viagem'))return'Viagens';return'Diversos'}
-function financeIcon(kind){
-  return kind==='income'
-    ? `<div class="finance-icon income" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="15" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h15M15.5 13.5h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="17.5" cy="17" r="4" fill="currentColor"/><path d="M17.5 15.2v3.6M16.2 16.3c.2-.6.7-.9 1.4-.9.8 0 1.3.4 1.3.9 0 .7-.6.8-1.3 1-.8.2-1.3.4-1.3 1 0 .6.6 1 1.3 1 .7 0 1.2-.3 1.4-.9" stroke="#fff" stroke-width=".85" stroke-linecap="round"/></svg></div>`
-    : `<div class="finance-icon expense" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h2l1.5 10.2a2 2 0 0 0 2 1.8h7.8a2 2 0 0 0 1.9-1.5L21 8H7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.2" fill="currentColor"/><circle cx="18" cy="20" r="1.2" fill="currentColor"/><path d="M9 11h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>`;
-}
+function financeIcon(kind){return kind==='income'?`<div class="finance-icon income">↗</div>`:`<div class="finance-icon expense">↘</div>`}
 function financeDate(){return `${String(Math.min(10,new Date(year,month+1,0).getDate())).padStart(2,'0')}/${String(month+1).padStart(2,'0')}/${year}`}
 function financeRecurring(items){return validItems(items).reduce((s,x)=>s+Number(x.values[month]||0),0)}
 function annualFinanceTable(kind,items){
@@ -345,43 +425,21 @@ function editable(kind){
   let d=data(),items=validItems(kind==='expense'?d.expenses:d.incomes),key=kind==='expense'?'expenses':'incomes';
   let total=(kind==='expense'?totals().exp:totals().inc)[month],annual=kind==='expense'?sum(totals().exp):sum(totals().inc);
   let cats=[...new Set(items.map(x=>String(x.category||financeCategory(kind,x.name))))].sort();
+  let color=kind==='expense'?'red':'green';
   let label=kind==='expense'?'despesas':'receitas';
   let titleLabel=kind==='expense'?'Despesas':'Receitas';
-  let cardClass=kind==='expense'?'bluepurple':'green';
-  let cardIcon=kind==='expense'
-    ? `<svg viewBox="0 0 24 24" fill="none"><path d="M4 5h2l1.5 10.2a2 2 0 0 0 2 1.8h7.8a2 2 0 0 0 1.9-1.5L21 8H7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.2" fill="currentColor"/><circle cx="18" cy="20" r="1.2" fill="currentColor"/></svg>`
-    : `<svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="15" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 9h15M15.5 13.5h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="17.5" cy="17" r="4" fill="currentColor"/></svg>`;
-  let rows=items.map(x=>{
-    let r=(kind==='expense'?d.expenses:d.incomes).indexOf(x),cat=String(x.category||financeCategory(kind,x.name)),val=Number(x.values[month]||0);
+  let rows=items.map(x=>{let r=(kind==='expense'?d.expenses:d.incomes).indexOf(x),cat=String(x.category||financeCategory(kind,x.name)),val=Number(x.values[month]||0),annualLine=sum(x.values),avg=annualLine/12;
     return `<tr data-name="${esc(String(x.name).toLowerCase())}" data-category="${esc(cat.toLowerCase())}">
       <td><div class="desc">${financeIcon(kind)}<input class="inline-text" value="${esc(x.name)}" aria-label="Descrição" onchange="editText('${key}',${r},'name',this.value)"></div></td>
       <td><input class="inline-text category-input" value="${esc(cat)}" aria-label="Categoria" onchange="editText('${key}',${r},'category',this.value)"></td>
       <td class="finance-date">${financeDate()}</td>
       <td class="finance-value ${kind==='expense'?'expense':'income'}"><div class="inline-money"><span>${kind==='expense'?'-':'+'}</span><input class="inline-value ${kind==='expense'?'expense':'income'} currency-input" type="text" value="${money(val)}" data-money="${val}" onfocus="moneyFocus(this)" onblur="moneyBlur(this)" aria-label="Valor de ${esc(x.name)}" onchange="editValue('${key}',${r},${month},this.value)"></div></td>
       <td><div class="finance-actions-cell"><button class="row-action delete" title="Excluir ${kind==='expense'?'despesa':'receita'}" aria-label="Excluir ${esc(x.name)}" onclick="deleteEntry('${key}',${r})">${trashIcon()}</button></div></td>
-    </tr>`;
-  }).join('');
-  return `<div class="finance-page">
-    ${layoutHead(titleLabel,kind==='expense'?'Controle suas despesas mensais com uma visão simples e organizada.':'Acompanhe suas receitas mensais de forma simples e organizada.',`<div class="finance-actions"><div class="monthnav"><button onclick="prevMonth()">‹</button><span>${MONTHS[month]} ${year}</span><button onclick="nextMonth()">›</button></div><button class="btn primary" onclick="openLaunch('${kind}')">＋ Nova ${kind==='expense'?'Despesa':'Receita'}</button></div>`)}
-    <div class="finance-cards">
-      <div class="finance-card ${kind==='expense'?'bluepurple':'green'}">
-        <div class="finance-card-icon">${cardIcon}</div>
-        <div class="eyebrow">${kind==='expense'?'TOTAL DE DESPESAS':'TOTAL DE RECEITAS'}</div>
-        <div class="big">${money(total)}</div>
-        <div class="sub">${kind==='expense'?(annual?`${pct(total/annual*100)} do total anual`: 'Controle mensal'):(annual?`${pct(total/annual*100)} do total anual`:'Controle mensal')}</div>
-      </div>
-    </div>
-    <div class="finance-tools">
-      <div class="finance-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input class="search" id="filter" placeholder="Buscar por descrição ou categoria..." oninput="filterRows()"></div>
-      <select class="select" id="catFilter" onchange="filterRows()"><option>Todas as categorias</option>${cats.map(c=>`<option>${esc(c)}</option>`).join('')}</select>
-      <span class="finance-count" id="financeCount">${items.length} linhas</span>
-    </div>
-    <div class="panel finance-panel">
-      <div class="finance-panel-head"><div><h3>${titleLabel} de ${MONTHS[month]}</h3><small class="muted">Edite descrição, categoria e valor diretamente na linha.</small></div><b class="total ${kind==='expense'?'negative':'positive'}">${money(total)}</b></div>
-      ${items.length?`<div class="tablewrap"><table class="table finance-table"><thead><tr><th>DESCRIÇÃO</th><th>CATEGORIA</th><th>DATA</th><th>VALOR</th><th></th></tr></thead><tbody id="rows">${rows}</tbody></table></div>`:`<div class="finance-empty"><b>Nenhuma ${kind==='expense'?'despesa':'receita'} neste mês</b>Registre ${kind==='expense'?'suas despesas':'suas receitas'} para manter o controle financeiro.</div>`}
-    </div>
-    <div class="year-close-note">☁ Alterações salvas automaticamente após cada edição.</div>
-  </div>`;
+    </tr>`}).join('');
+  return `<div class="finance-page">${layoutHead(titleLabel,kind==='expense'?'Linhas recorrentes: altere apenas o que mudou em cada mês.':'Fontes recorrentes: os valores podem ser ajustados diretamente em cada mês.',`<div class="finance-actions"><div class="monthnav"><button onclick="prevMonth()">‹</button><span>${MONTHS[month]} ${year}</span><button onclick="nextMonth()">›</button></div><button class="btn primary" onclick="openLaunch('${kind}')">＋ Nova ${kind==='expense'?'Despesa':'Receita'}</button></div>`)}
+    <div class="finance-tools"><div class="finance-search"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input class="search" id="filter" placeholder="Buscar por descrição ou categoria..." oninput="filterRows()"></div><select class="select" id="catFilter" onchange="filterRows()"><option>Todas as categorias</option>${cats.map(c=>`<option>${esc(c)}</option>`).join('')}</select><span class="finance-count" id="financeCount">${items.length} linhas</span></div>
+    <div class="panel finance-panel"><div class="finance-panel-head"><div><h3>${titleLabel} de ${MONTHS[month]}</h3><small class="muted">Descrição, categoria e valor são editáveis diretamente na linha. O valor do mês anterior é herdado automaticamente.</small></div><b class="total ${kind==='expense'?'negative':'positive'}">${money(total)}</b></div>${items.length?`<div class="tablewrap"><table class="table finance-table"><thead><tr><th>DESCRIÇÃO</th><th>CATEGORIA</th><th>DATA</th><th>VALOR</th><th></th></tr></thead><tbody id="rows">${rows}</tbody></table></div>`:`<div class="finance-empty"><b>Nenhuma linha cadastrada</b>Adicione uma nova ${kind==='expense'?'despesa':'receita'}.</div>`}</div>
+    <div class="year-close-note">💡 <b>Como funciona:</b> você cadastra a linha uma única vez. Nos meses seguintes, o sistema traz o valor do mês anterior e você só altera quando houver mudança.</div></div>`;
 }
 function editText(key,r,field,v){let x=data()[key][r];if(!x)return;x[field]=String(v||'').trim()||x[field];render()}
 function deleteEntry(key,r){let x=data()[key][r];if(!x)return;confirmDelete(`Excluir ${key==='expenses'?'despesa':'receita'}`,`Você está excluindo <b>${esc(x.name)}</b>. Como esta é uma linha recorrente, ela será removida deste ano inteiro.`,()=>{data()[key].splice(r,1);render()})}
