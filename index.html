@@ -161,6 +161,22 @@ body.dark .invest-bar-label{color:#c5cad5}
 /* Cabeçalho interno sem repetir o título da página: o nome da página fica apenas no topbar. */
 .compact-subhead{min-height:0;padding-top:0;padding-bottom:12px;margin-bottom:8px}
 .compact-subhead .subhead-desc{margin:0;color:var(--muted);font-size:13px;line-height:1.4}
+
+/* Menu lateral — navegação limpa, sem títulos de grupo */
+.sidebar .section{display:none!important}
+.nav{display:grid;gap:5px}
+.nav-main{margin-top:18px}.nav-finance{margin-top:24px}.nav-analysis{margin-top:24px}
+.nav button{display:flex;align-items:center;gap:13px;height:46px;padding:0 13px;margin:0;border-radius:12px;font-size:14px;font-weight:650;white-space:nowrap;overflow:hidden}
+.nav button .nav-icon{width:22px;height:22px;min-width:22px;display:grid;place-items:center;color:#aeb7c7}
+.nav button .nav-icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav button .nav-label{display:block}
+.nav button.active .nav-icon{color:#fff}
+.sidebar:not(:hover) .nav button{justify-content:center;gap:0;padding:0;width:100%;font-size:0}
+.sidebar:not(:hover) .nav button .nav-icon{width:22px;min-width:22px;height:22px}
+.sidebar:not(:hover) .nav button .nav-label{display:none}
+.sidebar:not(:hover) .nav-main{margin-top:20px}.sidebar:not(:hover) .nav-finance,.sidebar:not(:hover) .nav-analysis{margin-top:10px}
+.sidebar:hover .nav-main{margin-top:18px}
+.sidebar:hover .nav-finance,.sidebar:hover .nav-analysis{margin-top:22px}
 </style><style id="invest-top-cards-full-width">.invest-top-cards{grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%;max-width:none}.invest-top-cards .metric{width:100%}@media(max-width:760px){.invest-top-cards{grid-template-columns:1fr!important}}</style><style id="sidebar-hover-layout">
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
 .sidebar{width:78px;padding:22px 10px;transition:width .2s ease;overflow-x:hidden;overflow-y:auto;box-shadow:8px 0 24px rgba(15,23,42,.08)}
@@ -171,9 +187,9 @@ body.dark .invest-bar-label{color:#c5cad5}
 .sidebar:hover .brand>div:last-child,.sidebar:hover .goal,.sidebar:hover .section,.sidebar:hover .nav button,.sidebar:hover .sidebar-footer{opacity:1;pointer-events:auto}
 .brand>div:last-child{display:none}.sidebar:hover .brand>div:last-child{display:block}
 .goal{margin:15px 4px 27px}.nav button{font-size:0;text-align:center;padding:12px 9px}.sidebar:hover .nav button{font-size:14px;text-align:left;padding:12px 13px}
-.nav button::before{font-size:17px;display:inline-block;width:26px;text-align:center}
-.nav button[data-page="dashboard"]::before{content:'▦'}.nav button[data-page="receitas"]::before{content:'↗'}.nav button[data-page="despesas"]::before{content:'↘'}.nav button[data-page="investimentos"]::before{content:'◈'}.nav button[data-page="resumos"]::before{content:'▤'}.nav button[data-page="relatorios"]::before{content:'◒'}.nav button[data-page="planejamento"]::before{content:'◎'}
-.sidebar:hover .nav button::before{display:none}
+
+
+.sidebar:hover 
 .main{margin-left:88px}.topbar{display:none}
 .sidebar-account{display:flex;flex-direction:column;align-items:center;gap:9px;padding:14px 4px 15px;border-bottom:1px solid #263244}
 .sidebar:hover .sidebar-account{align-items:stretch;padding:12px 7px 15px}
@@ -195,8 +211,8 @@ body.dark .invest-bar-label{color:#c5cad5}
 
 <style id="collapsed-nav-icons-fix">
 .sidebar:not(:hover) .nav button{opacity:1!important;pointer-events:auto;font-size:0!important;text-align:center;padding:12px 9px;}
-.sidebar:not(:hover) .nav button::before{display:inline-block!important;font-size:18px;width:28px;text-align:center;color:#aeb7c7;line-height:1;}
-.sidebar:not(:hover) .nav button.active::before{color:#fff;}
+.sidebar:not(:hover) 
+
 .sidebar:not(:hover) .nav button:hover{background:#1b2638;color:#fff;}
 .sidebar:not(:hover) .section,.sidebar:not(:hover) .sidebar-footer,.sidebar:not(:hover) .goal{opacity:0!important;pointer-events:none!important;}
 .sidebar:not(:hover) .sidebar-account{align-items:center;}
@@ -206,7 +222,7 @@ body.dark .invest-bar-label{color:#c5cad5}
   <div class="goalrow"><span>◆ Meta de investimento</span><span id="goalPct">0,0%</span></div>
   <div class="goalbar"><i id="goalBar"></i></div>
   <small id="goalText">R$ 0,00 de R$ 1.000.000,00</small>
-</div><div class="sidebar-account"><div class="sidebar-user"><div class="avatar">W</div><div class="sidebar-user-copy"><b>Wesley</b><small>Membro</small></div></div><div class="sidebar-account-actions"><button class="iconbtn" id="themeBtn" title="Alternar modo claro/escuro" aria-label="Alternar modo claro/escuro">☾</button><button class="logout-btn" id="logoutBtn" title="Sair" aria-label="Sair">Sair</button></div></div><div class="section">PRINCIPAL</div><div class="nav"><button data-page="dashboard" class="active">▦ &nbsp; Dashboard</button></div><div class="section">FINANCEIRO</div><div class="nav"><button data-page="receitas">↗ &nbsp; Receitas</button><button data-page="despesas">↘ &nbsp; Despesas</button><button data-page="investimentos">◈ &nbsp; Investimentos</button></div><div class="section">ANÁLISES</div><div class="nav"><button data-page="resumos">▤ &nbsp; Resumos</button><button data-page="relatorios">◒ &nbsp; Relatórios</button><button data-page="planejamento">◎ &nbsp; Planejamento</button></div><div class="sidebar-footer"><button class="year-close" onclick="closeYear()">⟳ &nbsp; Encerrar ano</button><small>O resumo do ano encerrado fica preservado e um novo ano é criado com as linhas recorrentes zeradas.</small></div></aside><main class="main"><div class="mobile-nav"><select id="mobilePage" class="select" style="width:100%"><option value="dashboard">Dashboard</option><option value="receitas">Receitas</option><option value="despesas">Despesas</option><option value="investimentos">Investimentos</option><option value="resumos">Resumos</option><option value="relatorios">Relatórios</option><option value="planejamento">Planejamento</option></select></div><span id="pageTitle" class="sr-only">Dashboard</span><section class="content" id="content"><div class="panel" style="min-height:240px;display:grid;place-items:center;text-align:center"><div><div style="font-size:28px;margin-bottom:10px">💰</div><h2 style="margin:0 0 6px">Meu Controle Financeiro</h2><p class="muted" style="margin:0">Carregando seu controle financeiro…</p></div></div></section></main></div>
+</div><div class="sidebar-account"><div class="sidebar-user"><div class="avatar">W</div><div class="sidebar-user-copy"><b>Wesley</b><small>Membro</small></div></div><div class="sidebar-account-actions"><button class="iconbtn" id="themeBtn" title="Alternar modo claro/escuro" aria-label="Alternar modo claro/escuro">☾</button><button class="logout-btn" id="logoutBtn" title="Sair" aria-label="Sair">Sair</button></div></div><div class="nav nav-main"><button data-page="dashboard" class="active"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span class="nav-label">Dashboard</span></button></div><div class="nav nav-finance"><button data-page="receitas"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19 19 5"/><path d="M9 5h10v10"/></svg></span><span class="nav-label">Receitas</span></button><button data-page="despesas"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5 19 19"/><path d="M9 19H19V9"/></svg></span><span class="nav-label">Despesas</span></button><button data-page="investimentos"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17 9 12l4 3 7-8"/><path d="M15 7h5v5"/></svg></span><span class="nav-label">Investimentos</span></button></div><div class="nav nav-analysis"><button data-page="resumos"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><span class="nav-label">Resumos</span></button><button data-page="relatorios"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 19V9M12 19V5M19 19v-7"/></svg></span><span class="nav-label">Relatórios</span></button><button data-page="planejamento"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v3M20 12h-3"/></svg></span><span class="nav-label">Planejamento</span></button></div><div class="sidebar-footer"><button class="year-close" onclick="closeYear()">⟳ &nbsp; Encerrar ano</button><small>O resumo do ano encerrado fica preservado e um novo ano é criado com as linhas recorrentes zeradas.</small></div></aside><main class="main"><div class="mobile-nav"><select id="mobilePage" class="select" style="width:100%"><option value="dashboard">Dashboard</option><option value="receitas">Receitas</option><option value="despesas">Despesas</option><option value="investimentos">Investimentos</option><option value="resumos">Resumos</option><option value="relatorios">Relatórios</option><option value="planejamento">Planejamento</option></select></div><span id="pageTitle" class="sr-only">Dashboard</span><section class="content" id="content"><div class="panel" style="min-height:240px;display:grid;place-items:center;text-align:center"><div><div style="font-size:28px;margin-bottom:10px">💰</div><h2 style="margin:0 0 6px">Meu Controle Financeiro</h2><p class="muted" style="margin:0">Carregando seu controle financeiro…</p></div></div></section></main></div>
 <div class="auth-overlay" id="authOverlay"><div class="auth-box"><div style="font-size:34px;margin-bottom:10px">💰</div><h2>Meu Controle Financeiro</h2><p>Entre com seu e-mail e senha para carregar e salvar seus dados com segurança.</p><div class="field"><label>E-mail</label><input id="authEmail" type="email" autocomplete="email" placeholder="seu@email.com"></div><div class="field"><label>Senha</label><input id="authPassword" type="password" autocomplete="current-password" placeholder="Mínimo de 6 caracteres"></div><div class="auth-actions"><button class="btn primary" id="loginBtn">Entrar</button><button class="btn" id="signupBtn">Criar conta</button></div><div class="auth-msg" id="authMsg"></div></div></div>
 <div class="modal" id="modal"><div class="modalbox"><div class="modalhead"><h3 id="modalTitle">Novo lançamento</h3><button class="close" id="closeModal">×</button></div><div id="modalBody"></div><div class="modalfoot"><button class="btn" id="cancelModal">Cancelar</button><button class="btn primary" id="saveModal">Salvar</button></div></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
